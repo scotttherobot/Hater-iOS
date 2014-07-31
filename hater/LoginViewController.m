@@ -137,4 +137,41 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+/**************
+ * Signup stuff
+ **************/
+- (IBAction)signup:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Register"
+                                                    message:@"Choose a username and password."
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"Okay", nil];
+    [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
+    [alert show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"index %d", buttonIndex);
+    if (buttonIndex == 1) {
+        NSString *newusername = [[alertView textFieldAtIndex:0] text];
+        NSString *newpassword = [[alertView textFieldAtIndex:1] text];
+        id params = @{
+                      @"username": newusername,
+                      @"password": newpassword
+                      };
+        
+        [[APIClient sharedClient] POST:@"users/" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"Signed up as user %@!", newusername]];
+            loginId.text = newusername;
+            password.text = newpassword;
+            [self doLogin:nil];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [SVProgressHUD showErrorWithStatus:@"Something failed."];
+        }];
+    }
+}
+
 @end

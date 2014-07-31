@@ -59,6 +59,7 @@
     [alert show];
 }
 
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@"index %d", buttonIndex);
@@ -68,7 +69,7 @@
                       @"username": username
                       };
         
-        [[APIClient sharedClient] POST:@"hate/" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[APIClient sharedClient] POST:@"enemies/" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
             if([APIClient validateResponse:operation]) {
                 [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"Added user %@!", username]];
                 [self getFriends:nil];

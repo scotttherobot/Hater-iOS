@@ -14,6 +14,7 @@ UITableView *loginTable;
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 - (IBAction)doLogin:(id)sender;
+- (IBAction)signup:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 + (void)presentModallyFromViewController:(UIViewController *)viewController;
