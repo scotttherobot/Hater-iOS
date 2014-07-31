@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EnemiesCollectionViewCell.h
 //  hater
 //
 //  Created by Scott Vanderlind on 7/30/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface EnemiesCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 
 @end
-
