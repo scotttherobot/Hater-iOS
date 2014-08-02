@@ -10,10 +10,14 @@
 
 @interface APIClient : AFHTTPRequestOperationManager
 
+
+- (void)registerPushToken:(NSString *)token;
+
 + (id)sharedClient;
 + (BOOL)validateResponse:(AFHTTPRequestOperation *)operation;
 + (NSString *)baseUrl;
 + (NSString *)mediaUrl;
 
+@property (strong, nonatomic) NSString *pushToken;
 
 @end

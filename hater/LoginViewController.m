@@ -75,6 +75,21 @@
             [[[CredentialStore alloc] init] setAuthToken:key];
             [SVProgressHUD showSuccessWithStatus:@"You are now logged in!"];
             [self dismissViewControllerAnimated:YES completion:nil];
+            
+            id pushParams = @{
+                          @"device_type": @"IOS",
+                          @"token": [[APIClient sharedClient] pushToken]
+                          };
+            // Now that we are logged in, let's register our push token for this device.
+            [[APIClient sharedClient] POST:@"devices/" parameters:pushParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                // This is all happening in the background, so let's assume it worked.
+                [SVProgressHUD showSuccessWithStatus:@"Successfully enrolled for push."];
+                NSLog(@"push enrollment %@", responseObject);
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [SVProgressHUD showErrorWithStatus:@"Failed to enroll device for push notifications."];
+                NSLog(@"push enrollment failure %@", responseObject);
+            }];
+
         }
         self.statusLabel.text = [responseObject objectForKey:@"status"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

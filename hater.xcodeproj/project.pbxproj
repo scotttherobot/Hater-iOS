@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880ED45E198C99C100C8C90A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880ED45D198C99C100C8C90A /* AudioToolbox.framework */; };
 		8863432119899DC00087A74D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8863432019899DC00087A74D /* main.m */; };
 		8863432419899DC00087A74D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8863432319899DC00087A74D /* AppDelegate.m */; };
 		8863432A19899DC00087A74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8863432819899DC00087A74D /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		6061F0C6C8C341BDB8460A23 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		84E38D564641424B964A1E5B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		880ED45D198C99C100C8C90A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
 		8863431B19899DC00087A74D /* hater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8863431F19899DC00087A74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8863432019899DC00087A74D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880ED45E198C99C100C8C90A /* AudioToolbox.framework in Frameworks */,
 				AD889DA9A9D9416E831AB7FE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +148,7 @@
 		8CC144B3F66648C5A2041232 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				880ED45D198C99C100C8C90A /* AudioToolbox.framework */,
 				84E38D564641424B964A1E5B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -201,6 +205,7 @@
 				TargetAttributes = {
 					8863431A19899DC00087A74D = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4SAU2A56Y4;
 					};
 					8863433019899DC00087A74D = {
 						CreatedOnToolsVersion = 6.0;
@@ -404,11 +409,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6061F0C6C8C341BDB8460A23 /* Pods.xcconfig */;
 			buildSettings = {
+				"ADDITIONAL_SDKS[arch=*]" = "iOS 8.0";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandon Leventhal (4SAU2A56Y4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = hater/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6B318E2B-5B0E-49F2-8FA3-FA2CB7422C11";
+				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
 		};
@@ -418,9 +429,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandon Leventhal (4SAU2A56Y4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = hater/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6B318E2B-5B0E-49F2-8FA3-FA2CB7422C11";
+				SDKROOT = iphoneos7.1;
 			};
 			name = Release;
 		};

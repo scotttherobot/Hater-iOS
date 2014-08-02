@@ -38,6 +38,11 @@
     return self;
 }
 
+- (void)registerPushToken:(NSString *)token
+{
+    self.pushToken = token;
+}
+
 - (void)setAuthTokenHeader {
     CredentialStore *store = [[CredentialStore alloc] init];
     NSString *authToken = [store authToken];

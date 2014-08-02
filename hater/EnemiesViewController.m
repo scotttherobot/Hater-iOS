@@ -129,8 +129,8 @@
     NSLog(@"enemy %@ %@\n", [enemy valueForKey:@"username"], [enemy valueForKey:@"id"]);
     
     id params = @{
-                  @"target_user": [enemy valueForKey:@"id"],
-                  @"insult_id": @"3"
+                  @"target_user": [enemy valueForKey:@"id"]
+                  //@"insult_id": @"3"
                   };
     
     [[APIClient sharedClient] POST:@"hate/" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
