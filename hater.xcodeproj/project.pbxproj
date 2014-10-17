@@ -409,7 +409,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6061F0C6C8C341BDB8460A23 /* Pods.xcconfig */;
 			buildSettings = {
-				"ADDITIONAL_SDKS[arch=*]" = "iOS 8.0";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brandon Leventhal (4SAU2A56Y4)";

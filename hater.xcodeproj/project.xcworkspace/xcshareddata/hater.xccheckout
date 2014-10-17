@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EA66AD50-9202-4F0F-943A-CDAB7ABBF288</string>
+	<string>C50CBFC6-9323-4325-B5DF-BC7FACBA47F6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>hater</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A32BA6D7D26CD2A15E22432C03423455CA6B226D</key>
-		<string>ssh://bitbucket.org/scotttherobot/h8r-ios.git</string>
+		<string>bitbucket.org:scotttherobot/h8r-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>hater.xcworkspace</string>
+	<string>hater.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A32BA6D7D26CD2A15E22432C03423455CA6B226D</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/scotttherobot/h8r-ios.git</string>
+	<string>bitbucket.org:scotttherobot/h8r-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

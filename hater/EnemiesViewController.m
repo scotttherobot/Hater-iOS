@@ -42,10 +42,18 @@
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
                                                                              action:@selector(getFriends:)];
+    
+    // UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressDidFire:)];
+    // longPress.minimumPressDuration = 0.5;
 
     
     [self getFriends:nil];
     
+}
+
+- (void)longPressDidFire:(id)sender
+{
+    [SVProgressHUD showSuccessWithStatus:@"Long press!"];
 }
 
 - (void)addEnemy:(id)sender
@@ -62,7 +70,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"index %d", buttonIndex);
+    //NSLog(@"index %d", buttonIndex);
     if (buttonIndex == 1) {
         NSString *username = [[alertView textFieldAtIndex:0] text];
         id params = @{
